@@ -1,0 +1,66 @@
+.left-panel {
+    background-image: url(../../assets/left_panel_imag.jpg);
+    background-position: center;
+    background-size: 150% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    line-height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    transition: all ease-in-out 1s;
+    position: relative;
+}
+
+.left-panel-shift {
+    animation: left-animate 1s forwards;
+}
+
+@keyframes left-animate {
+    from {left: 0px;}
+    to {left: -100%;}
+}
+
+.left-panel-shift-undo {
+    animation: left-animate-undo 1s forwards;
+}
+
+@keyframes left-animate-undo {
+    from {left: -100%;}
+    to {left: 0px;}
+}
+
+.left-panel:hover {
+    color: white;
+    background-position: 40% 40%;
+}
+
+.intro-content {
+    z-index: 10;
+    opacity: 0.9;
+    margin-top: 40%;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 500;
+    color: #fff;
+    font-family: 'Hind', sans-serif;
+}
+
+h2 {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 300;
+    font-size: 27px;
+    font-family: 'Hind', sans-serif;
+}
+
+span {
+    color: #FFC300;
+}
+
+.social-media {
+    font-size: 25px;
+    text-align: center;
+    margin-top: -40%;
+}
