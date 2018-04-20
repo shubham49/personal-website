@@ -1,13 +1,19 @@
 .left-panel {
-    background-image: url(../../assets/left_panel_imag.jpg);
+    //background-image: url(../../assets/left_panel_imag.jpg);
     background-position: center;
     background-size: 150% 100%;
     background-repeat: no-repeat;
     height: 100vh;
     overflow: hidden;
     text-align: center;
-    transition: all ease-in-out 1s;
     position: relative;
+    img {
+        position: absolute;
+        height: 100%;
+        width: 150%;
+        left: 0;
+        transition: all ease-in-out 1s;
+    }
 }
 
 .left-panel-shift {
@@ -28,9 +34,8 @@
     to {left: 0px;}
 }
 
-.left-panel:hover {
-    color: white;
-    background-position: 40% 40%;
+.left-panel:hover > img {
+    left: -10%
 }
 
 .intro-content {

@@ -11,6 +11,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ResumeComponent } from './resume/resume.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
+import { ImagePreloaderDirective } from './image-preloader.directive';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ContactComponent } from './contact/contact.component';
     ProfileComponent,
     ResumeComponent,
     PortfolioComponent,
-    ContactComponent
+    ContactComponent,
+    ImagePreloaderDirective
   ],
   imports: [
     BrowserModule,
