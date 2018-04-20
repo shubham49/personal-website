@@ -1,12 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import * as emailjs from 'emailjs-com';
 
 @Component({
-  selector: 'app-portfolio',
-  templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.scss']
 })
-export class PortfolioComponent implements OnInit {
+export class ContactComponent implements OnInit {
+
+  name;
+  email;
+  message;
+  isValid = true;
+  isSubmitted = false;
 
   constructor(private router: Router) { }
 
@@ -14,7 +21,7 @@ export class PortfolioComponent implements OnInit {
     const leftPanel: any = document.querySelector('.left-panel');
     const rightPanel: any = document.querySelector('.right-panel');
     const innerComponent: any = document.querySelector('.component');
-    const portfolioComponents: any = document.querySelectorAll('.portfolio-container .col-sm-6');
+    const portfolioComponents: any = document.querySelectorAll('.contact-container');
     if (leftPanel && rightPanel) {
       leftPanel.classList.toggle('left-panel-shift');
       rightPanel.classList.toggle('right-panel-shift');
@@ -30,7 +37,7 @@ export class PortfolioComponent implements OnInit {
           element.classList.toggle('display');
         });
       }, 1000);
-      
+
     }
   }
 
@@ -48,8 +55,38 @@ export class PortfolioComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
-  goTo(website) {
-    window.open(website, '_blank');
+  validateEmail(mail) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+      return true;
+    }
+    return false;
+  }
+
+  validateForm() {
+    if (this.name && this.email && this.message) {
+      if (this.name !== '' && this.email !== '' && this.message !== '' && this.validateEmail(this.email)) {
+        this.isValid = true;
+        return true;
+      }
+    }
+    this.isValid = false;
+    return false;
+  }
+
+  updateValidity() {
+    this.validateForm();
+  }
+
+  submitForm() {
+    if (this.validateForm()) {
+      emailjs.send("default_service", "template_NgxCjRmr", { name: this.name, email: this.email, message: this.message }, "user_b7ePATwBISC3Um4pfPf3E")
+        .then(function (response) {
+          console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+        }, function (err) {
+          console.log("FAILED. error=", err);
+        });
+      this.isSubmitted = true;
+    }
   }
 
 

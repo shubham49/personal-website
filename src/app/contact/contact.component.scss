@@ -1,0 +1,76 @@
+.cross-button {
+    position: fixed;
+    cursor: pointer;
+    font-size: 40px;
+    margin-left: 55%;
+    margin-top: 1%;
+    z-index: 2000;
+}
+
+.left-contact-panel {
+    background-image: url(../../assets/contact_image.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    line-height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    transition: all ease-in-out 1s;
+    position: fixed;
+}
+
+.contact-left-text {
+    position: relative;
+    top: 50%;
+    h1 {
+        color: white;
+        font-size: 50px;
+    }
+    h1:after {
+        background-color: #FFC300;
+        position: absolute;
+        content: "";
+        top: 100%;
+        left: 20%;
+        width: 400px;
+        height: 6px;
+    }
+    span {
+        color: #FFC300;
+    }
+}
+
+.right-contact-panel {
+    background-color: rgb(245,245,245);
+    overflow: hidden;
+    text-align: center;
+    transition: all ease-in-out 1s;
+    position: relative;
+    left: 41.6%;
+    height: 100vh;
+}
+
+.header {
+    font-size: 30px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.display {
+    z-index: 1500;
+}
+
+.contact-container {
+    .contact-form {
+        .btn {
+            background-color: #ffc300;
+        }
+    }
+    .contact-details {
+        i {
+            font-size: 35px;
+            margin: 10px;
+        }
+    }
+}

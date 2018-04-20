@@ -54,3 +54,58 @@
     margin-top: 5%;
     margin-bottom: 5%;
 }
+
+.display {
+    z-index: 1500;
+}
+
+.portfolio-container {
+    .portfolio-component {
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        width: 95%;
+        height: 274px;
+        border-radius: 10px;
+        border: 1px solid;
+        margin-bottom: 10px;
+        .description {
+            height: 100%;
+            background-color: whitesmoke;
+            opacity: 0;
+            transition: 1s all;
+            text-align: left;
+            span {
+                padding: 25px;
+                font-size: 25px;
+            }
+            .line-separator {
+                margin: 5px;
+                height: 6px;
+                background-color: #ffc300;
+            }
+            p {
+                padding: 10px;
+            }
+        }
+        .description:hover {
+            opacity: 0.8;
+            color: black;
+        }
+    }
+    .portfolio-component:hover {
+        cursor: pointer;
+    }
+}
+
+.newspie {
+    background-image: url(../../assets/portfolio/newspie.png);
+}
+
+.chatbot {
+    background-image: url(../../assets/portfolio/chatbot.png);
+}
+
+.teammates {
+    background-image: url(../../assets/portfolio/teammates.png);
+}

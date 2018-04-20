@@ -1,0 +1,47 @@
+<div class="col-sm-12 col-xs-12">
+    <div class="col-sm-5 left-contact-panel">
+        <div class="mask"></div>
+        <div class="contact-left-text">
+            <h1>CO<span>N</span>TACT</h1>
+        </div>
+    </div>
+
+    <div class="col-sm-7 right-contact-panel">
+      <div class="cross-button" (click)="closeComponent()">
+        &#10005;
+      </div>
+      <div class="header">CONTACT</div>
+      <div class="contact-container col-sm-10 col-sm-offset-1">
+        <div class="contact-form">
+          <div class="form-group">
+            <input class="form-control" placeholder="Name.....*" [(ngModel)]="name" (change)="updateValidity()">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Email Address....*" [(ngModel)]="email" (change)="updateValidity()">
+          </div>
+          <div class="form-group">
+            <textarea rows="10" class="form-control" placeholder="Message.....*" [(ngModel)]="message" (change)="updateValidity()"></textarea>
+          </div>
+          <div *ngIf="!isValid">All the fields are mandatory, please fill the details accordingly.</div>
+          <div *ngIf="isSubmitted">Your request has been sent and you will be contacted shortly.</div>
+          <button class="btn btn-primary" (click)="submitForm()">Submit</button>
+        </div>
+      
+        <div class="contact-details">
+          <div class="header">CONTACT DETAILS</div>
+          <div class="col-sm-4">
+            <p><i class="fa fa-map-marker"></i><br>#88, sector 22A, Gurgaon</p>
+          </div>
+          <div class="col-sm-4">
+              <p><i class="fa fa-phone"></i><br>+919041864780</p>
+          </div>
+          <div class="col-sm-4">
+              <p><i class="fa fa-envelope"></i><br><a href="mailto:gargshubham49@gmail.com?Subject=Contact%20Form" target="_top">gargshubham49@gmail.com</a></p>
+          </div>
+        </div>
+
+      </div>
+    
+    </div>
+
+</div>

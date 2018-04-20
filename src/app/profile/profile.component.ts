@@ -24,6 +24,10 @@ export class ProfileComponent implements OnInit {
         leftPanel.classList.toggle('left-panel-shift-undo');
       }
       innerComponent.classList.toggle('hidden');
+      setTimeout(() => {
+        document.querySelector('.profile-container a').classList.toggle('display');
+        document.querySelector('.profile-container .col-sm-8').classList.toggle('display');
+      }, 1000);
     }
   }
 
