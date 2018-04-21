@@ -58,6 +58,15 @@ h2 {
     font-family: 'Hind', sans-serif;
 }
 
+@media (max-width: 767px) {
+    h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 15px;
+    }
+}
+
 span {
     color: #FFC300;
 }
@@ -76,7 +85,7 @@ span {
 }
 
 .links {
-    margin-top: 5%;
+    margin-top: 28px;
     a {
         cursor: pointer;
         color: #ffc300;
