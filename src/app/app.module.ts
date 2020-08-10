@@ -12,6 +12,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { ImagePreloaderDirective } from './image-preloader.directive';
+import { SkillsComponent } from './resume/skills/skills.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ImagePreloaderDirective } from './image-preloader.directive';
     ResumeComponent,
     PortfolioComponent,
     ContactComponent,
-    ImagePreloaderDirective
+    ImagePreloaderDirective,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
